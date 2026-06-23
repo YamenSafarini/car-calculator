@@ -1,28 +1,27 @@
 # 🚗 Smart Car Finance & Fuel Economy Calculator
 
-A comprehensive C++ command-line application built to assist users in making informed, data-driven decisions when purchasing a vehicle. It combines an Islamic auto finance calculator with a smart engine diagnostics tool to evaluate fuel efficiency.
+A comprehensive C++ command-line application built to assist users in making informed, data-driven decisions when purchasing a vehicle. It combines an Islamic auto finance calculator with a smart purchase feasibility tool tailored to different powertrain types.
 
 ## 🌟 Key Features
 
-* **Islamic Finance Calculator (Case 1):** Calculates monthly installments, total bank profit, and generates a structured annual payment schedule based on flat-rate Islamic finance principles.
-* **Reverse Price Calculator (Case 2):** Determines the maximum car price a user can afford based on their target monthly installment and available down payment.
-* **Smart Fuel Diagnostics:** Evaluates vehicle efficiency (km/20L or MPG) by analyzing engine capacity (CC), cylinder count, and powertrain type (Gasoline, Hybrid, PHEV), providing actionable expert advice.
-* **Automated Report Generation:** Exports detailed financial summaries and payment schedules directly to local `.txt` files (`Finance_Report.txt` & `Car_Price_Report.txt`).
-* **Robust Error Handling:** Implements strict input validation to prevent crashes and ensure data integrity.
-* **Dynamic UI:** Utilizes Windows API for a color-coded, user-friendly terminal interface.
+* **Islamic Finance Calculator:** Calculates accurate monthly installments and total bank profit based on flat-rate Islamic Murabaha principles, ensuring profit is only calculated on the financed amount after the down payment.
+* **Affordable Car Price Calculator:** Reverse-calculates the maximum car price a user can afford based on their target monthly installment, available down payment, and finance duration, complete with a built-in 20% salary budget warning.
+* **Car Purchase Feasibility Workflow:** A dynamic branching system that evaluates whether buying a specific car is a smart decision based on its powertrain type:
+  * **Gasoline & Hybrid:** Computes exact fuel savings (Liters & Money saved per 100km) compared to the user's old vehicle and benchmarks efficiency per 20L (التنكة).
+  * **Electric Vehicles (EV):** Benchmarks real-world driving range per full charge to evaluate usability and warn against range anxiety.
+* **Robust Error Handling & UX:** Implements input validation loops to handle incorrect menu selections, utilizes custom terminal color codes, and includes a persistent loop asking the user to return to the Main Menu or exit.
 
 ## 🛠️ Tech Stack
-* **Language:** C++ (C++11/C++14 standard)
-* **Libraries:** `<iostream>`, `<fstream>`, `<string>`, `<limits>`, `<windows.h>`
-* **Concepts Applied:** File I/O, Error Handling, Control Structures, Mathematical Modeling.
+* **Language:** C++ (C++11 standard)
+* **IDE/Compiler:** Visual Studio (MSVC) / Windows Terminal
+* **Concepts Applied:** Dynamic Branching (`if/else if`), Input Validation Loops (`while`), Data Type Optimization (`char`, `double`, `int`), and Terminal UI Customization.
 
 ## 🚀 How It Works
-1. Run the application in your terminal.
-2. Select **Case 1** to calculate installments for a specific car price.
-3. Select **Case 2** to find out what car price fits your monthly budget.
-4. Proceed to the **Fuel Economy Workflow** to test if the car's engine is mechanically healthy and cost-effective.
-5. Check your local directory for the generated `.txt` reports!
-
+1. Run the application in your Windows terminal.
+2. Navigate through the Main Menu options.
+3. Use the **Finance Tools** to figure out your monthly budget or installment costs.
+4. Proceed to the **Car Purchase Feasibility** tool, select your powertrain (Gasoline, EV, or Hybrid), and enter the vehicle's efficiency specs to receive an instant expert rating (Poor, Acceptable, or Excellent).
+5. Choose whether to return to the Main Menu (`Y`) or exit the application (`N`) safely.
 ---
 
 <img width="1482" height="762" alt="Screenshot 2026-06-23 122614" src="https://github.com/user-attachments/assets/84ce9673-8b0d-4997-8a1f-48bc2ccef061" />
